@@ -1,18 +1,27 @@
 # C# Library for [SparkPost](https://www.sparkpost.com)
 
-[![Travis CI](https://travis-ci.org/darrencauthon/csharp-sparkpost.svg?branch=master)](https://travis-ci.org/darrencauthon/csharp-sparkpost)
-
 A C# package for the [SparkPost API](https://developers.sparkpost.com/api). Xamarin.iOS and Xamarin.Android support provided in the Portable Package (PCL Profile7).
 
 ## Installation
 
-To install via NuGet, run the following command in the [Package Manager Console](http://docs.nuget.org/consume/package-manager-console):
+Configure GitHub Packages as a NuGet source. Replace the placeholders with a GitHub user name and a personal access token with the `read:packages` scope:
 
-```
-PM> Install-Package SparkPost
+```powershell
+dotnet nuget add source `
+    --name github-combeenation `
+    --username <github-username> `
+    --password <github-token> `
+    --store-password-in-clear-text `
+    "https://nuget.pkg.github.com/Combeenation/index.json"
 ```
 
-Alternatively, you can get the latest dll from the releases tab.  You can also download this code and compile it yourself.
+Install the package from the Package Manager Console:
+
+```powershell
+PM> Install-Package Combeenation.Libs.SparkPost -Version 1.15.0
+```
+
+Alternatively, download the source code and compile it yourself.
 
 ## Usage
 

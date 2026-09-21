@@ -1,13 +1,9 @@
-Bump the version:
+To publish a release:
 
-vim src/SparkPost/SparkPost.nuspec
+1. Update the <Version> value in src/SparkPost/SparkPost.csproj.
+2. Commit and push the version change to the default branch.
+3. In GitHub Actions, run the Publish NuGet Package workflow.
 
-vim src/SparkPost/Properties/AssemblyInfo.cs
+The workflow builds the package and publishes Combeenation.Libs.SparkPost to:
 
-
-Open Visual Studio, clean the solution, then build a new Release Build.
-
-
-Build the nuget package:
-
-nuget pack src/SparkPost/SparkPost.csproj -Prop Configuration=Release
+https://nuget.pkg.github.com/Combeenation/index.json
